@@ -1,0 +1,28 @@
+<div class="login-container" style="max-width: 400px; margin: auto">
+
+  <form autocomplete="off" #f="ngForm">
+    <div class="">
+
+      <div class="">
+        <h1>Login</h1>
+      </div>
+
+      <div class="fields">
+        <input type="email" name="user" placeholder="Email"
+          ngModel required #user>
+      </div>
+
+      <div class="fields">
+        <input type="password" name="password" placeholder="Password"
+          ngModel required #password>
+      </div>
+
+      <div class="submit-button">
+        <button type="submit" label="Login" [disabled]="!f.valid"
+          (click)="login(user.value, password.value)">Login</button>
+      </div>
+
+    </div>
+  </form>
+
+</div>

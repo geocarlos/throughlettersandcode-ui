@@ -6,6 +6,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { ArticlesModule } from '../articles/articles.module';
 import { VideosModule } from '../videos/videos.module';
 import { AppsModule } from '../apps/apps.module';
+import { SecurityModule } from '../security/security.module';
 
 @NgModule({
   declarations: [NavbarComponent],
@@ -15,7 +16,8 @@ import { AppsModule } from '../apps/apps.module';
     HomepageModule,
     ArticlesModule,
     VideosModule,
-    AppsModule
+    AppsModule,
+    SecurityModule
   ],
   exports: [
     NavbarComponent
