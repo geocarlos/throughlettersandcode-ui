@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100w;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.wrapper{
+  display: grid;
+}
+
+.container{
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #efefefff;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.presentation {
+  font-size: 2em;
+  color: #213c81ee;
+  padding: 3em 0 0 3em;
+  margin: 0;
+  height: 100vh;
+}
+
+.hidden {
+  display: none;
+}

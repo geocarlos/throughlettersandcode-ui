@@ -1,0 +1,13 @@
+<div class="container">    
+  <section id="videos" class="presentation videos">
+    <h1>My Videos</h1>
+    <div class="video" *ngFor="let video of videos">
+      <h2>{{ video.title }}</h2>
+      <iframe width="544" height="306" 
+        [src]="sanitizer.bypassSecurityTrustResourceUrl(video.videoUrl)" frameborder="0" 
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="description">{{ video.description }}</div>
+    </div>
+    <app-footer></app-footer>
+  </section>
+</div>

@@ -1,0 +1,68 @@
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 1052.3622 744.09448"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="down_icon.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="750.99806"
+     inkscape:cy="514.28571"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="721"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-308.26772)">
+    <g
+       id="g3343"
+       transform="matrix(1.0823546,0,0,1.0823546,92.145358,-122.03446)">
+      <path
+         id="rect3336"
+         d="M -1.6679688,482.36328 -77.380859,558.07617 402.85742,1038.3145 883.0957,558.07617 807.38086,482.36328 402.85742,886.88672 -1.6679688,482.36328 Z"
+         style="fill:#213c81dd;fill-opacity:1;stroke:#251212;stroke-width:1.00297916;stroke-miterlimit:10.69999981;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#f5962477;fill-opacity:1;stroke:#251212;stroke-width:0.64822328;stroke-miterlimit:10.69999981;stroke-dasharray:none;stroke-opacity:1"
+         d="M 140.15851,509.541 91.225434,558.47408 401.60238,868.85106 711.97934,558.47408 663.045,509.541 401.60238,770.98362 140.15851,509.541 Z"
+         id="path3341" />
+    </g>
+  </g>
+</svg>
