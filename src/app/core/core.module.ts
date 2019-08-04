@@ -7,6 +7,10 @@ import { ArticlesModule } from '../articles/articles.module';
 import { VideosModule } from '../videos/videos.module';
 import { AppsModule } from '../apps/apps.module';
 import { SecurityModule } from '../security/security.module';
+import { AuthService } from '../security/auth.service';
+import { JwtHelperService } from '@auth0/angular-jwt';
+import { ErrorHandlerService } from './error-handler.service';
+import { ToastyModule } from 'ng2-toasty';
 
 @NgModule({
   declarations: [NavbarComponent],
@@ -17,10 +21,17 @@ import { SecurityModule } from '../security/security.module';
     ArticlesModule,
     VideosModule,
     AppsModule,
-    SecurityModule
+    SecurityModule,
+    ToastyModule.forRoot()
   ],
   exports: [
-    NavbarComponent
+    NavbarComponent,
+    ToastyModule
+  ],
+  providers: [
+    AuthService,
+    JwtHelperService,
+    ErrorHandlerService
   ]
 })
 export class CoreModule { }

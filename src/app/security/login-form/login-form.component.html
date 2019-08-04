@@ -6,7 +6,6 @@
       <div class="">
         <h1>Login</h1>
       </div>
-
       <div class="fields">
         <input type="email" name="user" placeholder="Email"
           ngModel required #user>
@@ -19,7 +18,7 @@
 
       <div class="submit-button">
         <button type="submit" label="Login" [disabled]="!f.valid"
-          (click)="login(user.value, password.value)">Login</button>
+          (click)="login(user.value, password.value); password.value=''">Login</button>
       </div>
 
     </div>
