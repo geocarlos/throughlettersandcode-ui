@@ -11,17 +11,24 @@ import { AuthService } from '../security/auth.service';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { ErrorHandlerService } from './error-handler.service';
 import { ToastyModule } from 'ng2-toasty';
+import { TlcHttp } from '../security/tlc-http.service';
+import { NotAuthorizedComponent } from './not-authorized.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ArticleFilter } from '../articles/article.service';
+import { CategoriesModule } from '../categories/categories.module';
 
 @NgModule({
-  declarations: [NavbarComponent],
+  declarations: [NavbarComponent, NotAuthorizedComponent],
   imports: [
     CommonModule,
     AppRoutingModule,
     HomepageModule,
     ArticlesModule,
     VideosModule,
+    CategoriesModule,
     AppsModule,
     SecurityModule,
+    HttpClientModule,
     ToastyModule.forRoot()
   ],
   exports: [
@@ -31,7 +38,11 @@ import { ToastyModule } from 'ng2-toasty';
   providers: [
     AuthService,
     JwtHelperService,
-    ErrorHandlerService
+    ErrorHandlerService,
+    TlcHttp,
+    ArticleFilter,
+
+    JwtHelperService
   ]
 })
 export class CoreModule { }

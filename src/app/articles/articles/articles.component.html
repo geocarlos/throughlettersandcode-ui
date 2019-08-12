@@ -3,9 +3,9 @@
     <h1>My Blog</h1>
     <div class="article" *ngFor="let article of articles">
       <h2>{{ article.title }}</h2>
-      <div>{{ article.content.substring(0,200) }}...</div>
+      <div [innerHTML]="article.content"></div>
       <div><a href="">Read more</a></div>
     </div>
-    <app-footer></app-footer>
   </section>
 </div>
+<app-footer></app-footer>

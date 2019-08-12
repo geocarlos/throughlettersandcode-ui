@@ -1,0 +1,21 @@
+<div class="new-article">
+  <form #newArticleform="ngForm" (submit)="createArticle($event)" autocomplete="off">
+    <label for="title">Title:</label>
+    <input id="title" type="text" name="title" [(ngModel)]="article.title" >
+    <label for="content">Content: </label>
+    <textarea id="content" name="content" rows="10" [(ngModel)]="article.content"></textarea>
+    <label for="language">Language: </label>
+    <Select id="language" name="language" >
+      <option value="en">English</option>
+      <option value="pt">Portuguese</option>
+    </Select>
+    <label for="category">Category: </label>
+    <Select id="category" type="text" name="category" >
+      <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+    </Select>
+    <button type="submit">Create Article</button>
+  </form>
+  <button class="add-category" (click)="showNewCategoryForm()">Add Category</button>
+</div>
+<app-create-category [(isNewCategoryFormShown)]="isNewCategoryFormShown" *ngIf="isNewCategoryFormShown">
+</app-create-category>

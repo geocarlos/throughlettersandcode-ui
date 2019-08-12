@@ -17,7 +17,7 @@ export class LoginFormComponent {
 
   login(user: string, password: string) {
     this.authService.login(user, password).then(() => {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/']);
     }).catch(error => {
       this.errorHandler.handle(error);
     });

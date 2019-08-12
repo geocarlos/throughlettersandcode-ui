@@ -1,0 +1,12 @@
+<div class="new-category">
+  <div class="content-area">
+    <h2>New Category</h2>
+    <form #categoryForm="ngForm" autocomplete="off">
+      <input type="text" name="name" [(ngModel)]="category.name" placeholder="Name of new category">
+      <div style="padding: 1em">
+        <button (click)="addCategory($event)">Add</button>
+        <button (click)="close($event)">Close</button>
+      </div>
+    </form>
+  </div>
+</div>

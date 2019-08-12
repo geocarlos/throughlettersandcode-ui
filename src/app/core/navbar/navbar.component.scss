@@ -9,18 +9,27 @@ header {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-column: 2/13;
-    list-style: none;
-    background-color: #213c81bb;
+    background: linear-gradient(to right, #213c8177, #213c8199,  #213c81bb);
     height: 100%;
-    align-items: center;
     border-radius: 2.5em 0em 2.5em 0em;
+    column-gap: 1em;
+    ul{
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      list-style: none;
+      align-items: center;
+      justify-items: end;
+      grid-column-start: 6;
+      grid-column-end: 13;
+      column-gap: 1.5rem;
+    }
     a {
       color: #fefefeff;
       text-decoration: none;
       border-radius: 1.2em 0em 1.2em 0em;
+      padding: 0.5em;
       &:hover {
           background-color: #f59624ff;
-          padding: 0.5em;
         }
     }
   }
@@ -31,6 +40,10 @@ header {
     padding: 0.5em;
     align-items: center;
     background-color: #213c8166;
+    button{
+      border-radius: .5em;
+      padding: .3em;
+    }
   }
   
   #logo {
@@ -39,5 +52,4 @@ header {
 
   .active {
     background-color: #f59624ff;
-    padding: 0.5em;
   }

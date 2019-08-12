@@ -1,0 +1,25 @@
+.new-article {
+    margin: 150px;
+    form{
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        row-gap: 1.5em;
+        column-gap: .5em;
+    }
+    label {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        text-align: right;
+    }
+
+    input,
+    textarea {
+        grid-column-start: 3;
+        grid-column-end: 13;
+    }
+}
+
+.add-category {
+    margin: 10%;
+}

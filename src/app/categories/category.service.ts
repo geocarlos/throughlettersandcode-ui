@@ -1,18 +1,26 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { TlcHttp } from '../security/tlc-http.service';
+import { environment } from 'src/environments/environment';
+import { ErrorHandlerService } from '../core/error-handler.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
-  categoryUrl = 'http://localhost:8080/categories';
+  categoryUrl: string;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: TlcHttp, private errorHandler: ErrorHandlerService) {
+    this.categoryUrl = `${environment.apiUrl}/categories`;
+  }
 
-  listarTodas(): Promise<any> {
-    let headers = new HttpHeaders();
-    headers = headers.append('Authorization', 'Basic YWRtaW46YWRtaW4=');
+  listAll(): Promise<any> {
 
-    return this.http.get(this.categoryUrl, { headers }).toPromise();
+    return this.http.get<any>(this.categoryUrl).toPromise();
+  }
+
+  add(category: any) {
+    return this.http.post<any>(this.categoryUrl, category).toPromise()
+      .then(response => console.log(response))
+      .catch(error => this.errorHandler.handle(error));
   }
 }
