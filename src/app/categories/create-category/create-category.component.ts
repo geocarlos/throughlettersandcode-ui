@@ -21,7 +21,6 @@ export class CreateCategoryComponent {
 
   addCategory(e: any) {
     e.preventDefault();
-    if (e.target.value === '') { return; }
     this.categoryService.add(this.category);
     this.category.name = '';
   }

@@ -30,6 +30,7 @@ export class CreateArticleComponent implements OnInit {
     this.article.category = new Category();
     this.article.category.id = e.target.category.value;
     this.article.createdDate = new Date();
+    this.article.author.id = 1;
     console.log(this.article);
     this.articleService.create(this.article);
 

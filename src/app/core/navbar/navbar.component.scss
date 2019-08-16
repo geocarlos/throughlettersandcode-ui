@@ -40,9 +40,10 @@ header {
     padding: 0.5em;
     align-items: center;
     background-color: #213c8166;
-    button{
+    #logout-btn{
       border-radius: .5em;
       padding: .3em;
+      border: solid thin #333;
     }
   }
   

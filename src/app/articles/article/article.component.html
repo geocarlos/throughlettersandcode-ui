@@ -1,0 +1,8 @@
+<div class="container">
+  <section class="presentation article">
+    <h1>{{ article?.title }}</h1>
+    <p><em>{{article?.category.name}}</em></p>
+    <div class="article-content" [innerHTML]="article?.content"></div>
+  </section>
+  <app-footer></app-footer>
+</div>

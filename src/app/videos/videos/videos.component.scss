@@ -1,11 +1,10 @@
 .videos{
-    margin: 1em 5em;
+    margin: auto;
+    padding-top: 7%;
+    max-width: 80%;
     font-size: 1.2em;
-    scrollbar-width: 0;
     .video{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        border-top: solid 2px #213c81ee;
+        display: block;
         margin-bottom: 2em;
         h2{
             grid-column: 1/3;

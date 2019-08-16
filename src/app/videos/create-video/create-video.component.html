@@ -1,3 +1,23 @@
-<p>
-  create-video works!
-</p>
+<div class="new-video">
+  <form #newVideoForm="ngForm" (submit)="createVideo($event)" autocomplete="off">
+    <label for="title">Title:</label>
+    <input id="title" type="text" name="title" [(ngModel)]="video.title" >
+    <label for="title">YouTube ID:</label>
+    <input id="youtubeid" type="text" name="youtubeid" [(ngModel)]="video.youtubeId" >
+    <label for="description">Description: </label>
+    <textarea id="content" name="content" rows="10" [(ngModel)]="video.description"></textarea>
+    <label for="language">Language: </label>
+    <Select id="language" name="language" >
+      <option value="en">English</option>
+      <option value="pt">Portuguese</option>
+    </Select>
+    <label for="category">Category: </label>
+    <Select id="category" type="text" name="category" >
+      <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+    </Select>
+    <button type="submit">Create Video Record</button>
+  </form>
+  <button class="add-category" (click)="showNewCategoryForm()">Add Category</button>
+</div>
+<app-create-category [(isNewCategoryFormShown)]="isNewCategoryFormShown" *ngIf="isNewCategoryFormShown">
+</app-create-category>

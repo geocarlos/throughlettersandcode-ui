@@ -9,16 +9,20 @@ import { LoginFormComponent } from './security/login-form/login-form.component';
 import { NotAuthorizedComponent } from './core/not-authorized.component';
 import { AuthGuard } from './security/auth.guard';
 import { CreateArticleComponent } from './articles/create-article/create-article.component';
+import { CreateVideoComponent } from './videos/create-video/create-video.component';
+import { ArticleComponent } from './articles/article/article.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'articles', component: ArticlesComponent, canActivate: [AuthGuard], data: ['ROLE_READ_ARTICLE'] },
+  { path: 'articles', component: ArticlesComponent },
+  { path: 'articles/:id', component: ArticleComponent },
   { path: 'apps', component: AppsComponent },
-  { path: 'videos', component: VideosComponent, canActivate: [AuthGuard], data: ['ROLE_READ_VIDEO'] },
+  { path: 'videos', component: VideosComponent },
   { path: 'login', component: LoginFormComponent },
-  { path: 'create-article', component: CreateArticleComponent },
+  { path: 'create-article', component: CreateArticleComponent, canActivate: [AuthGuard], data: {roles: ['ROLE_CREATE_ARTICLE']} },
+  { path: 'create-video', component: CreateVideoComponent, canActivate: [AuthGuard], data: {roles: ['ROLE_CREATE_VIDEO']} },
   { path: 'not-authorized', component: NotAuthorizedComponent }
 ];
 

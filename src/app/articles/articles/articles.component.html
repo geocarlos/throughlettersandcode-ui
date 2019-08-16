@@ -3,8 +3,8 @@
     <h1>My Blog</h1>
     <div class="article" *ngFor="let article of articles">
       <h2>{{ article.title }}</h2>
-      <div [innerHTML]="article.content"></div>
-      <div><a href="">Read more</a></div>
+      <div class="article-content">{{ getPreview(article.content) }}</div>
+      <div><a [routerLink]="['/articles/' + article.id]">Read more</a></div>
     </div>
   </section>
 </div>

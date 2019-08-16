@@ -25,6 +25,7 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log('Auth: ', this.auth.hasAnyAuthority(['ROLE_READ_ARTICLE']));
   }
 
 }

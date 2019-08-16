@@ -1,15 +1,14 @@
-.articles{
+.article {
     margin: auto;
-    padding-top: 7%;
     max-width: 80%;
-    font-size: 1.2em;
-    .article{
-        margin-bottom: 2em;
+    height: 100vh;
+    div {
+        font-size: 14pt;
     }
 }
 
 @media screen and (max-width: 950px) {
-    .articles {
+    .article {
         min-width: 100%;
     }
 }

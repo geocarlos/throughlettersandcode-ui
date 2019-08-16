@@ -16,6 +16,7 @@ import { NotAuthorizedComponent } from './not-authorized.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ArticleFilter } from '../articles/article.service';
 import { CategoriesModule } from '../categories/categories.module';
+import { VideoFilter } from '../videos/video.service';
 
 @NgModule({
   declarations: [NavbarComponent, NotAuthorizedComponent],
@@ -41,6 +42,7 @@ import { CategoriesModule } from '../categories/categories.module';
     ErrorHandlerService,
     TlcHttp,
     ArticleFilter,
+    VideoFilter,
 
     JwtHelperService
   ]

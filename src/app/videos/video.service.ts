@@ -1,80 +1,80 @@
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Article } from '../core/models';
 import { environment } from 'src/environments/environment';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { Video } from '../core/models';
 import { TlcHttp } from '../security/tlc-http.service';
 
-export class ArticleFilter {
+export class VideoFilter {
   title: string;
-  content: string;
+  description: string;
+  youtubeId: string;
   createdDate: Date;
   page: 0;
   itemsPerPage: 10;
 }
 
+
 @Injectable({
   providedIn: 'root'
 })
-export class ArticleService {
+export class VideoService {
 
-  articlesUrl = `${environment.apiUrl}/articles`;
+  videosUrl = `${environment.apiUrl}/videos`;
 
   constructor(private http: TlcHttp, private httpClient: HttpClient) { }
 
-  get(filter: ArticleFilter): Promise<any> {
+  get(filter: VideoFilter): Promise<any> {
 
     const headers = new HttpHeaders()
       .append('Authorization', 'Basic YWRtaW46YWRtaW4=');
     const params = new HttpParams()
       .set('page', filter.page.toString())
-      .set('size', filter.itemsPerPage.toString())
-      .set('content', filter.content || '');
+      .set('size', filter.itemsPerPage.toString());
 
-    return this.httpClient.get(`${this.articlesUrl}`, { headers, params }).toPromise();
+    return this.httpClient.get(`${this.videosUrl}`, { headers, params }).toPromise();
   }
 
   delete(codigo: number): Promise<any> {
     const headers = new HttpHeaders()
       .append('Authorization', 'Basic YWRtaW46YWRtaW4=');
-    return this.http.delete(`${this.articlesUrl}/${codigo}`, { headers }).toPromise();
+    return this.http.delete(`${this.videosUrl}/${codigo}`, { headers }).toPromise();
   }
 
-  create(article: Article): Promise<any> {
+  create(video: Video): Promise<any> {
     const headers = new HttpHeaders()
       .append('Authorization', 'Basic YWRtaW46YWRtaW4=')
       .append('Content-Type', 'application/json');
 
-    return this.http.post(this.articlesUrl,
-        JSON.stringify(article), { headers })
+    return this.http.post(this.videosUrl,
+        JSON.stringify(video), { headers })
       .toPromise();
   }
 
-  update(article: Article): Promise<Article> {
+  update(video: Video): Promise<Video> {
     const headers = new HttpHeaders()
       .append('Authorization', 'Basic YWRtaW46YWRtaW4=')
       .append('Content-Type', 'application/json');
 
-    return this.http.put(`${this.articlesUrl}/${article.id}`,
-        JSON.stringify(article), { headers })
+    return this.http.put(`${this.videosUrl}/${video.id}`,
+        JSON.stringify(video), { headers })
       .toPromise()
       .then(response => {
-        const changedArticle = response as Article;
+        const changedArticle = response as Video;
 
         return changedArticle;
       });
   }
 
-  getById(id: number): Promise<Article> {
+  getById(id: number): Promise<Video> {
     const headers = new HttpHeaders()
       .append('Authorization', 'Basic YWRtaW46YWRtaW4=');
 
-    return this.httpClient.get(`${this.articlesUrl}/${id}`, { headers })
+    return this.http.get(`${this.videosUrl}/${id}`, { headers })
       .toPromise()
       .then(response => {
-        const article = response as Article;
+        const article = response as Video;
 
         return article;
       });
   }
-
 }

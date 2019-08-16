@@ -17,14 +17,20 @@ export class ArticlesComponent implements OnInit {
   constructor(
     private auth: AuthService,
     private articleService: ArticleService,
-    private errorHanlder: ErrorHandlerService) { }
+    private errorHandler: ErrorHandlerService) { }
+
+  getPreview(content: string) {
+    const preview = content.replace(/<\/?\w+>/g, '').substring(0, 140);
+    return content.length > preview.length ? `${preview}...` : preview;
+  }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
     this.filter.page = 0;
     this.filter.itemsPerPage = 10;
     this.articleService.get(this.filter)
     .then(response => {this.articles = response.content; console.log(response.content); })
-    .catch(error => this.errorHanlder.handle(error));
+    .catch(error => this.errorHandler.handle(error));
   }
 
 }
