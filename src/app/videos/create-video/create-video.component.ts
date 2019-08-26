@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Video, Category } from 'src/app/core/models';
 import { VideoService } from '../video.service';
 import { CategoryService } from 'src/app/categories/category.service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-create-video',
@@ -24,11 +25,7 @@ export class CreateVideoComponent implements OnInit {
     this.isNewCategoryFormShown = !this.isNewCategoryFormShown;
   }
 
-  createVideo(e) {
-    e.preventDefault();
-    this.video.language = e.target.language.value;
-    this.video.category = new Category();
-    this.video.category.id = e.target.category.value;
+  createVideo(form: FormControl) {
     this.video.createdDate = new Date();
     this.video.author.id = 1;
     console.log(this.video);
@@ -40,10 +37,13 @@ export class CreateVideoComponent implements OnInit {
     this.categoryService.listAll()
       .then(response => this.categories = response)
       .catch(error => console.log(error));
+
   }
 
   ngOnInit(): void {
     this.getCategories();
+    this.video.language = 'en';
+    this.video.category.id = 1;
   }
 
 }

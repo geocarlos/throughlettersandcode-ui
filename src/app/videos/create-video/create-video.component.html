@@ -1,5 +1,6 @@
+<!-- Template-based form -->
 <div class="new-video">
-  <form #newVideoForm="ngForm" (submit)="createVideo($event)" autocomplete="off">
+  <form #newVideoForm="ngForm" (ngSubmit)="createVideo(newVideoForm)" autocomplete="off">
     <label for="title">Title:</label>
     <input id="title" type="text" name="title" [(ngModel)]="video.title" >
     <label for="title">YouTube ID:</label>
@@ -7,14 +8,14 @@
     <label for="description">Description: </label>
     <textarea id="content" name="content" rows="10" [(ngModel)]="video.description"></textarea>
     <label for="language">Language: </label>
-    <Select id="language" name="language" >
+    <select id="language" name="language" [(ngModel)]="video.language" >
       <option value="en">English</option>
       <option value="pt">Portuguese</option>
-    </Select>
+    </select>
     <label for="category">Category: </label>
-    <Select id="category" type="text" name="category" >
+    <select id="category" type="text" name="category" [(ngModel)]="video.category.id" >
       <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
-    </Select>
+    </select>
     <button type="submit">Create Video Record</button>
   </form>
   <button class="add-category" (click)="showNewCategoryForm()">Add Category</button>
