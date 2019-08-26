@@ -19,6 +19,7 @@ export class ArticleComponent implements OnInit {
     private errorHandler: ErrorHandlerService) { }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
     this.articleService.getById(this.route.snapshot.params.id)
     .then(response => this.article = response)
     .catch(error => this.errorHandler.handle(error));

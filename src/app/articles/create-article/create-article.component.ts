@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Article, Category } from 'src/app/core/models';
 import { CategoryService } from 'src/app/categories/category.service';
 import { ArticleService } from '../article.service';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create-article',
@@ -13,27 +14,47 @@ export class CreateArticleComponent implements OnInit {
   isNewCategoryFormShown = false;
 
   article = new Article();
+  form: FormGroup;
 
   categories = [];
 
   constructor(
     private articleService: ArticleService,
-    private categoryService: CategoryService) { }
+    private formBuilder: FormBuilder,
+    private categoryService: CategoryService) { this.form = this.formBuilder.group(({
+      language: [null]
+    })); }
 
   showNewCategoryForm() {
     this.isNewCategoryFormShown = !this.isNewCategoryFormShown;
   }
 
-  createArticle(e) {
-    e.preventDefault();
-    this.article.language = e.target.language.value;
-    this.article.category = new Category();
-    this.article.category.id = e.target.category.value;
-    this.article.createdDate = new Date();
-    this.article.author.id = 1;
-    console.log(this.article);
-    this.articleService.create(this.article);
+  compare(val1, val2) {
+    return val1.id === val2.id;
+  }
 
+  configureForm() {
+    this.form = this.formBuilder.group({
+      id: [],
+      title: [null, Validators.required],
+      content: [null, [Validators.required, Validators.minLength(100)]],
+      language: ['en', Validators.required],
+      category: this.formBuilder.group({
+          id: [1, Validators.required]
+        }),
+      author: this.formBuilder.group({
+        id: [1, Validators.required]
+      })
+
+    });
+  }
+
+  createArticle() {
+    this.article = this.form.value;
+    this.article.createdDate = new Date();
+    this.articleService.create(this.article)
+    .then(() => window.alert('New article created'))
+    .catch(() => window.alert('problem creating new article'));
   }
 
   getCategories() {
@@ -44,5 +65,6 @@ export class CreateArticleComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCategories();
+    this.configureForm();
   }
 }
