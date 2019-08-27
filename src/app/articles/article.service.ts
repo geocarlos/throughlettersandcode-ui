@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, ɵLOCALE_DATA } from '@angular/core';
 import { Article } from '../core/models';
 import { environment } from 'src/environments/environment';
 import { TlcHttp } from '../security/tlc-http.service';
@@ -17,9 +17,13 @@ export class ArticleFilter {
 })
 export class ArticleService {
 
+  language: string;
+
   articlesUrl = `${environment.apiUrl}/articles`;
 
-  constructor(private http: TlcHttp, private httpClient: HttpClient) { }
+  constructor(private http: TlcHttp, private httpClient: HttpClient) {
+    this.language = Object.keys(ɵLOCALE_DATA)[0] || 'en';
+  }
 
   get(filter: ArticleFilter): Promise<any> {
 
@@ -30,7 +34,7 @@ export class ArticleService {
       .set('size', filter.itemsPerPage.toString())
       .set('content', filter.content || '');
 
-    return this.httpClient.get(`${this.articlesUrl}`, { headers, params }).toPromise();
+    return this.httpClient.get(`${this.articlesUrl}?language=${this.language}`, { headers, params }).toPromise();
   }
 
   delete(codigo: number): Promise<any> {

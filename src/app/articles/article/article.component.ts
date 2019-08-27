@@ -12,6 +12,7 @@ import { ErrorHandlerService } from 'src/app/core/error-handler.service';
 export class ArticleComponent implements OnInit {
 
   article: Article;
+  language: string;
 
   constructor(
     private articleService: ArticleService,

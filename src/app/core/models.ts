@@ -8,6 +8,7 @@ export class User {
 
 export class Category {
     id: number;
+    name: string;
 }
 
 export class Article {
