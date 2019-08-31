@@ -7,6 +7,15 @@
     }
 }
 
+.manage {
+    text-align: center;
+    padding: 1em;
+    a {
+        padding: .5em;
+        color: #213c81ee;
+    }
+}
+
 @media screen and (max-width: 950px) {
     .article {
         min-width: 100%;

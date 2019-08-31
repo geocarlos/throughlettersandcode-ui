@@ -22,7 +22,9 @@ const routes: Routes = [
   { path: 'videos', component: VideosComponent },
   { path: 'login', component: LoginFormComponent },
   { path: 'create-article', component: CreateArticleComponent, canActivate: [AuthGuard], data: {roles: ['ROLE_CREATE_ARTICLE']} },
+  { path: 'edit-article/:id', component: CreateArticleComponent, canActivate: [AuthGuard], data: {roles: ['ROLE_CREATE_ARTICLE']} },
   { path: 'create-video', component: CreateVideoComponent, canActivate: [AuthGuard], data: {roles: ['ROLE_CREATE_VIDEO']} },
+  { path: 'edit-video/:id', component: CreateVideoComponent, canActivate: [AuthGuard], data: {roles: ['ROLE_CREATE_VIDEO']} },
   { path: 'not-authorized', component: NotAuthorizedComponent }
 ];
 

@@ -18,10 +18,9 @@
           [value]="category.id">{{ category.name }}</option>
       </select>
     </div>
-    <button  type="submit">Create Article</button>
+    <button  type="submit">Save Article</button>
   </form>
   <button class="add-category" (click)="showNewCategoryForm()">Add Category</button>
 </div>
 <app-create-category [(isNewCategoryFormShown)]="isNewCategoryFormShown" *ngIf="isNewCategoryFormShown">
 </app-create-category>
-<pre>{{ form.value | json }}</pre>
