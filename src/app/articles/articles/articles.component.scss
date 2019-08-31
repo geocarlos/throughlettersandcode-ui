@@ -8,6 +8,17 @@
     }
 }
 
+.read-more {
+    padding: 1em 0 0 0;
+    a {
+        color: #213c81ee;
+        text-decoration: none;
+        padding: .5em;
+        border: solid thin;
+        border-radius: .5em;
+    }
+}
+
 @media screen and (max-width: 950px) {
     .articles {
         min-width: 100%;

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ɵLOCALE_DATA } from '@angular/core';
 import { ToastyConfig } from 'ng2-toasty';
+import { AppLanguage } from './app.language';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,6 @@ import { ToastyConfig } from 'ng2-toasty';
 export class AppComponent {
   constructor(private toastyConfig: ToastyConfig) {
     this.toastyConfig.theme = 'bootstrap';
+    AppLanguage.setLanguage(Object.keys(ɵLOCALE_DATA)[0] || 'en');
   }
 }

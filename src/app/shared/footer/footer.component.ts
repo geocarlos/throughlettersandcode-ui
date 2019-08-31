@@ -9,6 +9,10 @@ export class FooterComponent implements OnInit {
 
   constructor() { }
 
+  goToTop(): void {
+    window.scrollTo(0, 0);
+  }
+
   ngOnInit() {
   }
 

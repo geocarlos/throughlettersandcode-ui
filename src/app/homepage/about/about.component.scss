@@ -1,3 +1,8 @@
+@keyframes enter{
+    from {opacity: .1; transform: scale(.9)}
+    to {opacity: 1; transform: scale(1)}
+}
+
 .about{
     margin: 1em 10em 5em 5em;
     font-size: 1.2em;
@@ -7,4 +12,11 @@
     p{
         color: #332;
     }
+    animation-name: enter;
+    animation-duration: 1s;
+}
+
+.about-video {
+    text-align: center;
+    padding: 1em;
 }

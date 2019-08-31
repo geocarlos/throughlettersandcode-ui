@@ -3,6 +3,7 @@ import { environment } from 'src/environments/environment';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Video } from '../core/models';
 import { TlcHttp } from '../security/tlc-http.service';
+import { AppLanguage } from '../app.language';
 
 export class VideoFilter {
   title: string;
@@ -19,9 +20,11 @@ export class VideoFilter {
 })
 export class VideoService {
 
+  language = AppLanguage.getLanguage();
   videosUrl = `${environment.apiUrl}/videos`;
 
-  constructor(private http: TlcHttp, private httpClient: HttpClient) { }
+  constructor(private http: TlcHttp, private httpClient: HttpClient) {
+  }
 
   get(filter: VideoFilter): Promise<any> {
 
@@ -31,7 +34,7 @@ export class VideoService {
       .set('page', filter.page.toString())
       .set('size', filter.itemsPerPage.toString());
 
-    return this.httpClient.get(`${this.videosUrl}`, { headers, params }).toPromise();
+    return this.httpClient.get(`${this.videosUrl}?language=${this.language}`, { headers, params }).toPromise();
   }
 
   delete(codigo: number): Promise<any> {

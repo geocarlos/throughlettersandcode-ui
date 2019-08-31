@@ -2,17 +2,37 @@
   <div class="container">
     <section id="home" class="presentation">
       <div class="section-text">
-        <h1>{{activeSection.title}}</h1>
-        <p>{{activeSection.subtitle}}</p>
+        <div *ngFor="let section of activeSections" class="{{section.animClass}}">
+          <h1>{{section.title}}</h1>
+          <p>{{section.subtitle}}</p>
+        </div>
       </div>
       <div id="go-down">
-        <a href="#homecontent"><img src="assets/images/down_icon.svg" alt="go down"></a>
+        <a href="#_home"><img src="assets/images/down_icon.svg" alt="go down"></a>
       </div>
     </section>
   </div>
   <div class="container">
-    <section id="homecontent" class="presentation">
-      <h1 i18n>This is where I will put some content for the home page.</h1>
+    <section id="_home" class="presentation">
+      <div class="text-content">
+        <h2 class="home-header-1st" i18n>Human languages,</h2>
+        <h2 class="home-header-2nd" i18n>computer languages...</h2>
+        <h2 class="home-header-3rd" i18n>It is all about code!</h2>
+        <p i18n>
+          Language, literature, programming languages, software development...
+          Have you ever thought about seeing such things together? Well, I have dealt with
+          both for a while.
+        </p>
+        <p i18n>
+          I have developed this site to share my thoughts and experience on translation
+          from English to Portuguese, and to some extent, translation in general for
+          software localization.
+        </p>
+        <p i18n>
+          I also share some hopefully relevant knowledge and insight in the Portuguese
+          language, especially the variation spoken in Brazil.
+        </p>
+      </div>
     </section>
   </div>
 </div>

@@ -49,7 +49,7 @@ export class CreateArticleComponent implements OnInit {
     });
   }
 
-  createArticle() {
+  saveArticle() {
     this.article = this.form.value;
     this.article.createdDate = new Date();
     this.articleService.create(this.article)

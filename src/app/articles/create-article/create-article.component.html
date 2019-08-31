@@ -1,6 +1,6 @@
 <!-- Reactive or model-based form -->
 <div class="new-article">
-  <form (ngSubmit)="createArticle()" [formGroup]="form"  autocomplete="off">
+  <form (ngSubmit)="saveArticle()" [formGroup]="form"  autocomplete="off">
     <label for="title">Title:</label>
     <input id="title" type="text" name="title" formControlName="title" >
     <label for="content">Content: </label>

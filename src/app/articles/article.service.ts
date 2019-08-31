@@ -1,8 +1,9 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Injectable, ɵLOCALE_DATA } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Article } from '../core/models';
 import { environment } from 'src/environments/environment';
 import { TlcHttp } from '../security/tlc-http.service';
+import { AppLanguage } from '../app.language';
 
 export class ArticleFilter {
   title: string;
@@ -17,12 +18,11 @@ export class ArticleFilter {
 })
 export class ArticleService {
 
-  language: string;
+  language = AppLanguage.getLanguage();
 
   articlesUrl = `${environment.apiUrl}/articles`;
 
   constructor(private http: TlcHttp, private httpClient: HttpClient) {
-    this.language = Object.keys(ɵLOCALE_DATA)[0] || 'en';
   }
 
   get(filter: ArticleFilter): Promise<any> {
