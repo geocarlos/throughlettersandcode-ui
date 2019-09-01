@@ -1,6 +1,6 @@
 <!-- Template-based form -->
 <div class="new-video">
-  <form #newVideoForm="ngForm" (ngSubmit)="createVideo(newVideoForm)" autocomplete="off">
+  <form #newVideoForm="ngForm" (ngSubmit)="saveVideo(newVideoForm)" autocomplete="off">
     <label for="title">Title:</label>
     <input id="title" type="text" name="title" [(ngModel)]="video.title" >
     <label for="title">YouTube ID:</label>
@@ -16,9 +16,10 @@
     <select id="category" type="text" name="category" [(ngModel)]="video.category.id" >
       <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
     </select>
-    <button type="submit">Create Video Record</button>
+    <button type="submit">Save Video Record</button>
   </form>
   <button class="add-category" (click)="showNewCategoryForm()">Add Category</button>
 </div>
 <app-create-category [(isNewCategoryFormShown)]="isNewCategoryFormShown" *ngIf="isNewCategoryFormShown">
 </app-create-category>
+<pre>{{ video | json }}</pre>

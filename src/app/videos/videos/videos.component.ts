@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { VideoService, VideoFilter } from '../video.service';
 import { ErrorHandlerService } from 'src/app/core/error-handler.service';
+import { AuthService } from 'src/app/security/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-videos',
@@ -17,8 +19,19 @@ export class VideosComponent implements OnInit {
 
   constructor(
     private sanitizer: DomSanitizer,
+    private auth: AuthService,
     private videoService: VideoService,
+    private router: Router,
     private errorHandler: ErrorHandlerService) { }
+
+    deleteArticle(id: number) {
+      this.videoService.delete(id)
+      .then(() => {
+        window.alert('Video has been deleted.');
+        this.router.navigateByUrl('/videos');
+      })
+      .catch(error => this.errorHandler.handle(error));
+    }
 
   ngOnInit() {
     window.scrollTo(0, 0);

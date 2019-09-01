@@ -62,9 +62,9 @@ export class VideoService {
         JSON.stringify(video), { headers })
       .toPromise()
       .then(response => {
-        const changedArticle = response as Video;
+        const changedVideo = response as Video;
 
-        return changedArticle;
+        return changedVideo;
       });
   }
 

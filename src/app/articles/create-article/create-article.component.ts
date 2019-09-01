@@ -38,10 +38,6 @@ export class CreateArticleComponent implements OnInit {
     this.isNewCategoryFormShown = !this.isNewCategoryFormShown;
   }
 
-  // compare(val1, val2) {
-  //   return val1.id === val2.id;
-  // }
-
   configureForm() {
     this.form = this.formBuilder.group({
       id: [],

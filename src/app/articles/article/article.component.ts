@@ -17,7 +17,7 @@ export class ArticleComponent implements OnInit {
 
   constructor(
     private articleService: ArticleService,
-    private auth: AuthService,
+    public auth: AuthService,
     private route: ActivatedRoute,
     private router: Router,
     private errorHandler: ErrorHandlerService) { }

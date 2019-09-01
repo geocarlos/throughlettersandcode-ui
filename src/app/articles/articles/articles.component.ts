@@ -15,7 +15,7 @@ export class ArticlesComponent implements OnInit {
   filter = new ArticleFilter();
 
   constructor(
-    private auth: AuthService,
+    public auth: AuthService,
     private articleService: ArticleService,
     private errorHandler: ErrorHandlerService) { }
 
