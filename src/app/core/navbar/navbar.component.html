@@ -3,12 +3,12 @@
     <a href="#"><img id="logo" src="assets/images/logo.png" alt=""></a>
     <div class="menu">
       <ul>
-        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" i18n>Home</a></li>
-        <li><a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" i18n>About</a></li>
-        <li><a routerLink="/articles" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" i18n>Articles</a></li>
-        <li><a routerLink="/videos" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" i18n>Videos</a></li>
-        <li><a routerLink="/apps" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" i18n>Apps</a></li>
-        <li *ngIf="!auth.isAccessTokenInvalid()"><button id="logout-btn" (click)="logout()" i18n>Logout</button></li>
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" i18n="@@navbarHome">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" i18n="@@navbarAbout">About</a></li>
+        <li><a routerLink="/articles" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" i18n="@@navbarArticles">Articles</a></li>
+        <li><a routerLink="/videos" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" i18n="@@navbarVideos">Videos</a></li>
+        <li><a routerLink="/apps" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" i18n="@@navbarApps">Apps</a></li>
+        <li *ngIf="!auth.isAccessTokenInvalid()"><button id="logout-btn" (click)="logout()" i18n="@@navbarLogout">Logout</button></li>
       </ul>
     </div>
   </nav>

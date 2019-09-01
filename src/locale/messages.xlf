@@ -2,82 +2,70 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="92eee6be6de0b11c924e3ab27db30257159c0a7c" datatype="html">
+      <trans-unit id="navbarHome" datatype="html">
         <source>Home</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/navbar/navbar.component.html</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="004b222ff9ef9dd4771b777950ca1d0e4cd4348a" datatype="html">
+      <trans-unit id="navbarAbout" datatype="html">
         <source>About</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/navbar/navbar.component.html</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3b6143a528c6f4586e60e9af4ced8ac0fbe08251" datatype="html">
+      <trans-unit id="navbarArticles" datatype="html">
         <source>Articles</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/navbar/navbar.component.html</context>
           <context context-type="linenumber">8</context>
         </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/articles/articles/articles.component.html</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
       </trans-unit>
-      <trans-unit id="a52dae09be10ca3a65da918533ced3d3f4992238" datatype="html">
+      <trans-unit id="navbarVideos" datatype="html">
         <source>Videos</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/navbar/navbar.component.html</context>
           <context context-type="linenumber">9</context>
         </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/videos/videos/videos.component.html</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
       </trans-unit>
-      <trans-unit id="4c78c0da1bcd65bc0598c4d9474bde165de27d7a" datatype="html">
+      <trans-unit id="navbarApps" datatype="html">
         <source>Apps</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/navbar/navbar.component.html</context>
           <context context-type="linenumber">10</context>
         </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/apps/apps/apps.component.html</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
       </trans-unit>
-      <trans-unit id="bb694b49d408265c91c62799c2b3a7e3151c824d" datatype="html">
+      <trans-unit id="navbarLogout" datatype="html">
         <source>Logout</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/navbar/navbar.component.html</context>
           <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6b5951a646c6e7bfc1cfce9bd663c4755f3e04e8" datatype="html">
+      <trans-unit id="homeHeader1st" datatype="html">
         <source>Human languages,</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/homepage/home/home.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="69aa3233030d0da4b27f4b2221c6c6f19cc6c053" datatype="html">
+      <trans-unit id="homeHeader2nd" datatype="html">
         <source>computer languages...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/homepage/home/home.component.html</context>
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="a8d8aed23bb741dd50e375515b3664e47c8e2786" datatype="html">
+      <trans-unit id="homeHeader3rd" datatype="html">
         <source>It is all about code!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/homepage/home/home.component.html</context>
           <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4e00f4666b80d8cd6cdfed6bb53329e1a19d1b61" datatype="html">
+      <trans-unit id="homeParagraph1" datatype="html">
         <source>
           Language, literature, programming languages, software development...
           Have you ever thought about seeing such things together? Well, I have dealt with
@@ -88,7 +76,7 @@
           <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="71ea547d8eacf143ddf6d92e20e635c4d5238efe" datatype="html">
+      <trans-unit id="homeParagraph2" datatype="html">
         <source>
           I have developed this site to share my thoughts and experience on translation
           from English to Portuguese, and to some extent, translation in general for
@@ -99,7 +87,7 @@
           <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5ecb5b68e46027077966e1663e1c43c8b4e0bb48" datatype="html">
+      <trans-unit id="homeParagraph3" datatype="html">
         <source>
           I also share some hopefully relevant knowledge and insight in the Portuguese
           language, especially the variation spoken in Brazil.
@@ -109,21 +97,42 @@
           <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="10f056dd9fa3ce236f04efd38ed65b33a8492181" datatype="html">
+      <trans-unit id="articlesHeader" datatype="html">
+        <source>Articles</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/articles/articles/articles.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="articlesReadMore" datatype="html">
         <source>Read more</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/articles/articles/articles.component.html</context>
           <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1d623af2e90be5c817211a0326c481f995343019" datatype="html">
+      <trans-unit id="headerApps" datatype="html">
+        <source>Apps</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/apps/apps/apps.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="videosHeader" datatype="html">
+        <source>Videos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/videos/videos/videos.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutHeader" datatype="html">
         <source>About myself</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/homepage/about/about.component.html</context>
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="697068cde063ba2caf1415316bb038cff4bb90f9" datatype="html">
+      <trans-unit id="aboutParagraph1" datatype="html">
         <source>
     My name is Geocarlos. I have worked as an English-Portuguese translator since 2007. In 2009, with ICanLocalize, an
     online translation/localization service provided by OnTheGo Systems, which is a company based in Las Vegas, I
@@ -135,7 +144,7 @@
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="893e7aa31e16d7779197f9ca450d45914ca78212" datatype="html">
+      <trans-unit id="aboutParagraph2" datatype="html">
         <source>
     In August 2017, I completed a undergraduate program in system development. I have
     developed some skills in Java, JavaScript (DOM and Node, with Express) and TypeScript (with Angular and Ionic). I
@@ -145,7 +154,7 @@
           <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="62e0b3e740e1b764d5faaf1a3f35c55e1a5e8194" datatype="html">
+      <trans-unit id="aboutParagraph3" datatype="html">
         <source>
     Besides translation projects,
     I am also interested in entry level jobs as a software developer. As an English-Portuguese translator, I have a vast
@@ -159,7 +168,7 @@
           <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6ae1c94f6bad274424f97e9bc8766242c1577447" datatype="html">
+      <trans-unit id="footerTop" datatype="html">
         <source>Top</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/footer/footer.component.html</context>

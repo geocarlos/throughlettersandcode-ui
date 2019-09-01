@@ -1,13 +1,13 @@
 <div class="container">
   <section id="articles" class="presentation articles">
-    <h1 i18n>Articles</h1>
+    <h1 i18n="@@articlesHeader">Articles</h1>
     <div class="manage" *ngIf="!auth.isAccessTokenInvalid()">
       <a routerLink="/create-article/">Create Article</a>
     </div>
     <div class="article" *ngFor="let article of articles">
       <h2>{{ article.title }}</h2>
       <div class="article-content">{{ getPreview(article.content) }}</div>
-      <div class="read-more"><a [routerLink]="['/articles/' + article.id]" i18n>Read more</a></div>
+      <div class="read-more"><a [routerLink]="['/articles/' + article.id]" i18n="@@articlesReadMore">Read more</a></div>
     </div>
   </section>
 </div>
