@@ -10,6 +10,19 @@
         <li><a routerLink="/apps" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" i18n="@@navbarApps">Apps</a></li>
         <li *ngIf="!auth.isAccessTokenInvalid()"><button id="logout-btn" (click)="logout()" i18n="@@navbarLogout">Logout</button></li>
       </ul>
+      <div id="sandwich">
+        <img (click)="toggleMenu()" src="./assets/images/sandwich.svg" alt="">
+      </div>
     </div>
   </nav>
+  <div *ngIf="isShowingToggleMenu" class="toggle-menu">
+    <ul>
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" i18n="@@toggleMenuHome">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" i18n="@@toggleMenuAbout">About</a></li>
+      <li><a routerLink="/articles" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" i18n="@@toggleMenuArticles">Articles</a></li>
+      <li><a routerLink="/videos" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" i18n="@@toggleMenuVideos">Videos</a></li>
+      <li><a routerLink="/apps" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" i18n="@@toggleMenuApps">Apps</a></li>
+      <li *ngIf="!auth.isAccessTokenInvalid()"><button id="logout-btn" (click)="logout()" i18n="@@toggleMenuLogout">Logout</button></li>
+    </ul>
+  </div>
 </header>

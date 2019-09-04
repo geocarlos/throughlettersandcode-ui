@@ -47,6 +47,27 @@ header {
       border: solid thin #333;
     }
   }
+
+  .toggle-menu {
+    display: none;
+    width: 30%;
+    justify-content: center;
+    position: absolute;
+    right: 5%;
+    background-color: #213c8166;
+    ul {
+      list-style: none;
+      padding: .5em;
+      li {
+        padding: .2em;
+        a {
+          padding: 2px;
+          color: #fefefeff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
   
   #logo {
     height: 4em;
@@ -54,4 +75,51 @@ header {
 
   .active {
     background-color: #f59624ff;
+  }
+
+  #sandwich{
+    display: none;
+    img {
+      width: 50px;
+    }
+  }
+
+  @media screen and (max-width: 1050px) {
+    .menu {
+      ul{
+        grid-column-start: 3;
+      }
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    .menu {
+      ul{
+        display: none;
+      }
+    }
+
+    #sandwich {
+      display: flex;
+      grid-column-start: 11;
+    }
+
+    .toggle-menu {
+      display: flex;
+    }
+  }
+
+  @media screen and (max-width: 440px) {
+    #sandwich {
+      grid-column-start: 9;
+    }
+    #logo {
+      height: 3em;
+    }
+  }
+  
+  @media screen and (max-width: 330px) {
+    #sandwich {
+      grid-column-start: 7;
+    }
   }

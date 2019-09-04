@@ -11,6 +11,8 @@ import { ErrorHandlerService } from '../error-handler.service';
 })
 export class NavbarComponent implements OnInit {
 
+  isShowingToggleMenu = false;
+
   constructor(
     public auth: AuthService,
     private logoutService: LogoutService,
@@ -22,6 +24,10 @@ export class NavbarComponent implements OnInit {
       this.router.navigate(['/login']);
     })
     .catch(error => this.errorHandler.handle(error));
+  }
+
+  toggleMenu() {
+    this.isShowingToggleMenu = !this.isShowingToggleMenu;
   }
 
   ngOnInit() {
