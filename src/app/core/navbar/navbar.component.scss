@@ -80,12 +80,13 @@ header {
   #sandwich{
     display: none;
     img {
-      width: 50px;
+      width: 30px;
     }
   }
 
   @media screen and (max-width: 1050px) {
     .menu {
+      z-index: 1;
       ul{
         grid-column-start: 3;
       }

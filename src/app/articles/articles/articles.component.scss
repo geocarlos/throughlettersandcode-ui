@@ -24,3 +24,22 @@
         min-width: 100%;
     }
 }
+
+@media screen and (max-width: 780px) {
+    .articles{
+        padding: 5em .5em .5em .5em;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .articles {
+        margin: auto;
+    }
+
+    .read-more {
+        text-align: center;
+        a {
+            padding: 5px;
+        }
+    }
+}

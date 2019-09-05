@@ -50,3 +50,24 @@ body{
 .hidden {
   display: none;
 }
+
+
+@media screen and (max-width: 780px) {
+  .presentation {
+    font-size: 2em;
+    padding: 5em .5em 1em 1em;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .presentation {
+    font-size: 1.2em;
+    padding: 5em .5em 1em .5em;
+  }
+}
+
+@media screen and (max-height: 360px){
+  .presentation {
+    padding-top: 2.7em;
+  }
+}

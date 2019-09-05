@@ -16,7 +16,7 @@
     </div>
   </nav>
   <div *ngIf="isShowingToggleMenu" class="toggle-menu">
-    <ul>
+    <ul (click)="toggleMenu()">
       <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" i18n="@@toggleMenuHome">Home</a></li>
       <li><a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" i18n="@@toggleMenuAbout">About</a></li>
       <li><a routerLink="/articles" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" i18n="@@toggleMenuArticles">Articles</a></li>
