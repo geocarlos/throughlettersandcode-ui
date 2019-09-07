@@ -30,3 +30,38 @@ footer{
         background-color: #213c81aa;
     }
 }
+
+.footer-name-year {
+    position: absolute;
+    right: 5%;
+    bottom: 3%;
+}
+
+.online-presence {
+    padding: 1em;
+    max-width: 25vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    column-gap: 1em;
+    row-gap: 2em;
+    img{
+        position: relative;
+        width: 1em;
+        height: 1em;
+    }
+}
+
+@media screen and (min-width: 440px){
+    .online-presence {
+        padding: 3em 1em 1em 1em;
+        row-gap: 2em;
+        column-gap: 2em;
+        img{
+            position: relative;
+            width: 2em;
+            height: 2em;
+        }
+    }
+}

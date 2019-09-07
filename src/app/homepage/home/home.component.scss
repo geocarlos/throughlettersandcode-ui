@@ -108,11 +108,9 @@
   @keyframes fadeIn {
     from {
       opacity: 0.5;
-      left: 10%;
     }
     to {
       opacity: 1;
-      left: 15%;
     }
   }
 
@@ -131,22 +129,29 @@
     left: 200%;
   }
 
+  .fadeInAnim{
+    left: 5%;
+  }
+
   .section-text{
-    overflow: auto;
     padding: 30% 2px 2px 1em;
     background: linear-gradient(to bottom, #cccf, #fff7);
     min-height: 70vh;
-    min-width: 95vw;
+    min-width: 90vw;
   }
   .text-content{
     padding: 3px;
-    min-width: 95vw;   
+    min-width: 90vw;   
   }
 }
 
 @media screen and (max-width: 440px){
   .section-text{
     padding: 40% 2px 2px 5em;
+    min-width: 95vw;
+  }
+  .text-content{
+    min-width: 95vw;   
   }
 }
 
