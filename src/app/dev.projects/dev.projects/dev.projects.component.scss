@@ -1,9 +1,9 @@
-.apps{
+.dev-projects{
     margin: auto;
     max-width: 80%;
     font-size: 1.2em;
     padding-top: 5em;
-    .app-info{
+    .dev-project{
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin-bottom: 2em;
@@ -17,20 +17,13 @@
 }
 
 @media screen and (max-width: 780px) {
-    .apps{
+    .dev-projects{
         padding: 5em .5em .5em .5em;
     }
 }
 
 @media screen and (max-width: 440px) {
-    .apps {
+    .dev-projects {
         margin: auto;
-    }
-
-    .read-more {
-        text-align: center;
-        a {
-            padding: 5px;
-        }
     }
 }

@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AppsComponent } from './apps/apps.component';
+import { DevProjectsComponent } from './dev.projects/dev.projects.component';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [AppsComponent],
+  declarations: [DevProjectsComponent],
   imports: [
     CommonModule,
     SharedModule
   ],
   exports: [
-    AppsComponent
+    DevProjectsComponent
   ]
 })
-export class AppsModule { }
+export class DevProjectsModule { }

@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
-import { TlcHttp } from '../security/tlc-http.service';
 import { environment } from 'src/environments/environment';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AppService {
+export class DevProjectService {
 
-  appsUrl = `${environment.apiUrl}/apps`;
+  appsUrl = `${environment.apiUrl}/devprojects`;
 
   constructor(private httpClient: HttpClient) { }
 

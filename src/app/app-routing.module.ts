@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './homepage/home/home.component';
 import { ArticlesComponent } from './articles/articles/articles.component';
-import { AppsComponent } from './apps/apps/apps.component';
+import { DevProjectsComponent } from './dev.projects/dev.projects/dev.projects.component';
 import { VideosComponent } from './videos/videos/videos.component';
 import { AboutComponent } from './homepage/about/about.component';
 import { LoginFormComponent } from './security/login-form/login-form.component';
@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'articles', component: ArticlesComponent },
   { path: 'articles/:id', component: ArticleComponent },
-  { path: 'apps', component: AppsComponent },
+  { path: 'dev-projects', component: DevProjectsComponent },
   { path: 'videos', component: VideosComponent },
   { path: 'login', component: LoginFormComponent },
   { path: 'create-article', component: CreateArticleComponent, canActivate: [AuthGuard], data: {roles: ['ROLE_CREATE_ARTICLE']} },

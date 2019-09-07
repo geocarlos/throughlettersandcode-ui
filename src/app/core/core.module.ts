@@ -5,7 +5,7 @@ import { HomepageModule } from '../homepage/homepage.module';
 import { AppRoutingModule } from '../app-routing.module';
 import { ArticlesModule } from '../articles/articles.module';
 import { VideosModule } from '../videos/videos.module';
-import { AppsModule } from '../apps/apps.module';
+import { DevProjectsModule } from '../dev.projects/dev.projects.module';
 import { SecurityModule } from '../security/security.module';
 import { AuthService } from '../security/auth.service';
 import { JwtHelperService } from '@auth0/angular-jwt';
@@ -27,7 +27,7 @@ import { VideoFilter } from '../videos/video.service';
     ArticlesModule,
     VideosModule,
     CategoriesModule,
-    AppsModule,
+    DevProjectsModule,
     SecurityModule,
     HttpClientModule,
     ToastyModule.forRoot()
