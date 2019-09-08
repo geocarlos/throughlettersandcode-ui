@@ -1,0 +1,23 @@
+.project {
+    margin: auto;
+    max-width: 80%;
+    height: 100vh;
+    div {
+        font-size: 14pt;
+    }
+}
+
+.manage {
+    text-align: center;
+    padding: 1em;
+    a {
+        padding: .5em;
+        color: #213c81ee;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .project {
+        min-width: 100%;
+    }
+}

@@ -31,3 +31,13 @@ export class Video {
     category = new Category();
     language: string;
 }
+
+export class DevProject {
+    id: number;
+    title: string;
+    author = new User();
+    createdDate: Date;
+    youtubeId: string;
+    description: string;
+    language: string;
+}

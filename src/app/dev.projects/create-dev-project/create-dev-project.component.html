@@ -1,0 +1,17 @@
+<!-- Template-based form -->
+<div class="new-project">
+    <form #newProjectForm="ngForm" (ngSubmit)="saveProject(newProjectForm)" autocomplete="off">
+      <label for="title">Title:</label>
+      <input id="title" type="text" name="title" [(ngModel)]="project.title" >
+      <label for="title">YouTube ID:</label>
+      <input id="youtubeid" type="text" name="youtubeid" [(ngModel)]="project.youtubeId" >
+      <label for="description">Description: </label>
+      <textarea id="description" name="description" rows="10" [(ngModel)]="project.description"></textarea>
+      <label for="language">Language: </label>
+      <select id="language" name="language" [(ngModel)]="project.language" >
+        <option value="en">English</option>
+        <option value="pt">Portuguese</option>
+      </select>
+      <button type="submit">Save project Record</button>
+    </form>
+  </div>

@@ -1,9 +1,13 @@
 <div class="container">    
-  <section id="dev-projects" class="presentation dev-projects">
+  <section id="dev-projects" class="presentation projects">
     <h1 i18n="@@headerProjects">Software Development Projects</h1>
+    <div class="manage" *ngIf="!auth.isAccessTokenInvalid()">
+      <a routerLink="/create-dev-project/">Create Dev Project</a>
+    </div>
     <div *ngFor="let project of devProjects" class="dev-project">
       <h2>{{ project.title }}</h2>
-      <p>{{ project.description }}</p>
+      <p>{{ getPreview(project.description) }}</p>
+      <div class="read-more"><a [routerLink]="['/dev-projects/' + project.id]" i18n="@@projectsReadMore">Read more</a></div>
     </div>
   </section>
 </div>

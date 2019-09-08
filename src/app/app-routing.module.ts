@@ -11,6 +11,8 @@ import { AuthGuard } from './security/auth.guard';
 import { CreateArticleComponent } from './articles/create-article/create-article.component';
 import { CreateVideoComponent } from './videos/create-video/create-video.component';
 import { ArticleComponent } from './articles/article/article.component';
+import { DevProjectComponent } from './dev.projects/dev-project/dev-project.component';
+import { CreateDevProjectComponent } from './dev.projects/create-dev-project/create-dev-project.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,6 +21,9 @@ const routes: Routes = [
   { path: 'articles', component: ArticlesComponent },
   { path: 'articles/:id', component: ArticleComponent },
   { path: 'dev-projects', component: DevProjectsComponent },
+  { path: 'dev-projects/:id', component: DevProjectComponent },
+  { path: 'create-dev-project', component: CreateDevProjectComponent },
+  { path: 'edit-dev-project/:id', component: CreateDevProjectComponent },
   { path: 'videos', component: VideosComponent },
   { path: 'login', component: LoginFormComponent },
   { path: 'create-article', component: CreateArticleComponent, canActivate: [AuthGuard], data: {roles: ['ROLE_CREATE_ARTICLE']} },

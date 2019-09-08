@@ -1,0 +1,11 @@
+<div class="container">
+    <section class="presentation project">
+        <h1>{{ project?.title }}</h1>
+        <div class="project-description" [innerHTML]="project?.description"></div>
+        <div class="manage" *ngIf="!auth.isAccessTokenInvalid()">
+            <a routerLink="/edit-project/{{project?.id}}">Edit</a>
+            <a style="cursor: pointer; text-decoration: underline" (click)="deleteProject(project?.id)">Delete</a>
+        </div>
+    </section>
+    <app-footer></app-footer>
+</div>
