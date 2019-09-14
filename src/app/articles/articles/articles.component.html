@@ -4,6 +4,9 @@
     <div class="manage" *ngIf="!auth.isAccessTokenInvalid()">
       <a routerLink="/create-article/">Create Article</a>
     </div>
+    <div *ngIf="noArticles">
+      <h3 i18n="@@noArticlesNotice">Sorry, no articles yet.</h3>
+    </div>
     <div class="article" *ngFor="let article of articles">
       <h2>{{ article.title }}</h2>
       <div class="article-content">{{ getPreview(article.content) }}</div>

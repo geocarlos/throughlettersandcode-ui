@@ -21,7 +21,7 @@ export function tokenGetter() {
     JwtModule.forRoot({
       config: {
         tokenGetter,
-        whitelistedDomains: environment.tokenWhitelistedDomains,
+        whitelistedDomains: [ 'localhost:8080', 'api.throughlettersandcode.com' ],
         blacklistedRoutes: environment.tokenBlacklistedRoutes
       }
     })

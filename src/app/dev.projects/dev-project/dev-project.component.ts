@@ -26,7 +26,7 @@ export class DevProjectComponent implements OnInit {
     this.projectService.delete(id)
     .then(() => {
       window.alert('Project has been deleted.');
-      this.router.navigateByUrl('/projects');
+      this.router.navigateByUrl('/dev-projects');
     })
     .catch(error => this.errorHandler.handle(error));
   }

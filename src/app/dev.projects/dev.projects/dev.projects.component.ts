@@ -17,13 +17,17 @@ export class DevProjectsComponent implements OnInit {
 
   constructor(
     private devProjectService: DevProjectService,
-    private auth: AuthService,
+    public auth: AuthService,
     private errorHandler: ErrorHandlerService) { }
+
+  get noProjects(): boolean {
+    return this.devProjects.length < 1;
+  }
 
   ngOnInit() {
     window.scrollTo(0, 0);
     this.devProjectService.listAll()
-    .then(response => {this.devProjects = response; console.log(response); })
+    .then(response => {this.devProjects = response.content; })
     .catch(error => this.errorHandler.handle(error));
   }
 

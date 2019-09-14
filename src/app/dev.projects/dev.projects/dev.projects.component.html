@@ -4,6 +4,9 @@
     <div class="manage" *ngIf="!auth.isAccessTokenInvalid()">
       <a routerLink="/create-dev-project/">Create Dev Project</a>
     </div>
+    <div *ngIf="noProjects">
+      <h3 i18n="@@noProjectsNotice">Sorry, no projects to show yet.</h3>
+    </div>
     <div *ngFor="let project of devProjects" class="dev-project">
       <h2>{{ project.title }}</h2>
       <p>{{ getPreview(project.description) }}</p>

@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { AuthService } from './auth.service';
 import { TlcHttp } from './tlc-http.service';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LogoutService {
 
-  tokensRevokeUrl = 'http://localhost:8080/tokens/revoke';
+  tokensRevokeUrl = `${environment.apiUrl}/tokens/revoke`;
 
   constructor(private http: TlcHttp, private auth: AuthService) { }
 

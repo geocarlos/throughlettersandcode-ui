@@ -31,7 +31,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="navbarApps" datatype="html">
-        <source>Apps</source>
+        <source>Projects</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/navbar/navbar.component.html</context>
           <context context-type="linenumber">10</context>
@@ -73,7 +73,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="toggleMenuApps" datatype="html">
-        <source>Apps</source>
+        <source>Projects</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/navbar/navbar.component.html</context>
           <context context-type="linenumber">24</context>
@@ -146,18 +146,39 @@
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="noArticlesNotice" datatype="html">
+        <source>Sorry, no articles yet.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/articles/articles/articles.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="articlesReadMore" datatype="html">
         <source>Read more</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/articles/articles/articles.component.html</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="headerApps" datatype="html">
-        <source>Apps</source>
+      <trans-unit id="headerProjects" datatype="html">
+        <source>Software Development Projects</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/apps/apps/apps.component.html</context>
+          <context context-type="sourcefile">app/dev.projects/dev.projects/dev.projects.component.html</context>
           <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="noProjectsNotice" datatype="html">
+        <source>Sorry, no projects to show yet.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dev.projects/dev.projects/dev.projects.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projectsReadMore" datatype="html">
+        <source>Read more</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dev.projects/dev.projects/dev.projects.component.html</context>
+          <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="videosHeader" datatype="html">
@@ -165,6 +186,13 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/videos/videos/videos.component.html</context>
           <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="noVideosNotice" datatype="html">
+        <source>Sorry, no videos yet.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/videos/videos/videos.component.html</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="aboutHeader" datatype="html">
@@ -176,45 +204,47 @@
       </trans-unit>
       <trans-unit id="aboutParagraph1" datatype="html">
         <source>
-    My name is Geocarlos. I have worked as an English-Portuguese translator since 2007. In 2009, with ICanLocalize, an
-    online translation/localization service provided by OnTheGo Systems, which is a company based in Las Vegas, I
-    started working in projects for the localization of mobile applications, especially iOS and Android apps, and
-    websites. I have a degree in English and Portuguese language and literature, and a graduate certificate in
-    English-Portuguese translation.</source>
+      My name is Geocarlos. I have worked as an English-Portuguese translator since 2007. In 2009, with ICanLocalize, an
+      online translation/localization service provided by OnTheGo Systems, which is a company based in Las Vegas, I
+      started working in projects for the localization of mobile applications, especially iOS and Android apps, and
+      websites. I have a degree in English and Portuguese language and literature, and a graduate certificate in
+      English-Portuguese translation.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/homepage/about/about.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="aboutParagraph2" datatype="html">
         <source>
-    In August 2017, I completed a undergraduate program in system development. I have
-    developed some skills in Java, JavaScript (DOM and Node, with Express) and TypeScript (with Angular and Ionic). I
-    have learned and praticed Ionic and Cordova on my own, developing hybrid mobile apps. </source>
+      In August 2017, I completed a undergraduate program in system development. I have
+      developed some skills in Java, JavaScript (DOM and Node, with Express) and TypeScript (with Angular and Ionic). I
+      have learned and praticed Ionic and Cordova on my own, developing hybrid mobile apps. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/homepage/about/about.component.html</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="aboutParagraph3" datatype="html">
         <source>
-    Besides translation projects,
-    I am also interested in entry level jobs as a software developer. As an English-Portuguese translator, I have a vast
-    experience, including projects with over 100,000 words. Some of the companies I have worked with through
-    ICanLocalize are HunterLab (website, PDF brochures), SkyFold (website), Kakao (iOS and Android app), Entec Polymers
-    (website), Grand Hotel et de Milan, to mention just a few. I am willing to take tests before getting hired for any
-    project.
-  </source>
+      Besides translation projects,
+      I am also interested in entry level jobs as a software developer. As an English-Portuguese translator, I have a
+      vast
+      experience, including projects with over 100,000 words. Some of the companies I have worked with through
+      ICanLocalize are HunterLab (website, PDF brochures), SkyFold (website), Kakao (iOS and Android app), Entec
+      Polymers
+      (website), Grand Hotel et de Milan, to mention just a few. I am willing to take tests before getting hired for any
+      project.
+    </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/homepage/about/about.component.html</context>
-          <context context-type="linenumber">16</context>
+          <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footerTop" datatype="html">
         <source>Top</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/footer/footer.component.html</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
     </body>

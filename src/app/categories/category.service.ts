@@ -9,7 +9,9 @@ import { ErrorHandlerService } from '../core/error-handler.service';
 export class CategoryService {
   categoryUrl: string;
 
-  constructor(private http: TlcHttp, private errorHandler: ErrorHandlerService) {
+  constructor(
+    private http: TlcHttp,
+    private errorHandler: ErrorHandlerService) {
     this.categoryUrl = `${environment.apiUrl}/categories`;
   }
 

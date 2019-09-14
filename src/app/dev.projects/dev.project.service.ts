@@ -3,13 +3,15 @@ import { environment } from 'src/environments/environment';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { TlcHttp } from '../security/tlc-http.service';
 import { DevProject } from '../core/models';
+import { AppLanguage } from '../app.language';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DevProjectService {
-
-  projectsUrl = `${environment.apiUrl}/devprojects`;
+ 
+  language = AppLanguage.getLanguage();
+  projectsUrl = `${environment.apiUrl}/devprojects?language=${this.language}`;
 
   constructor(private http: TlcHttp, private httpClient: HttpClient) { }
 
@@ -54,12 +56,13 @@ export class DevProjectService {
     const headers = new HttpHeaders()
       .append('Authorization', 'Basic YWRtaW46YWRtaW4=');
 
-    return this.http.get(`${this.projectsUrl}/${id}`, { headers })
+    return this.httpClient.get(`${this.projectsUrl}/${id}`, { headers })
       .toPromise()
       .then(response => {
-        const article = response as DevProject;
 
-        return article;
+        const project = response as DevProject;
+
+        return project;
       });
   }
 }

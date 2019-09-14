@@ -24,22 +24,26 @@ export class VideosComponent implements OnInit {
     private router: Router,
     private errorHandler: ErrorHandlerService) { }
 
-    deleteArticle(id: number) {
-      this.videoService.delete(id)
+  deleteVideo(id: number) {
+    this.videoService.delete(id)
       .then(() => {
         window.alert('Video has been deleted.');
         this.router.navigateByUrl('/videos');
       })
       .catch(error => this.errorHandler.handle(error));
-    }
+  }
+
+  get noVideos(): boolean {
+    return this.videos.length < 1;
+  }
 
   ngOnInit() {
     window.scrollTo(0, 0);
     this.filter.page = 0;
     this.filter.itemsPerPage = 10;
     this.videoService.get(this.filter)
-    .then(response => {this.videos = response.content; console.log(response.content); })
-    .catch(error => this.errorHandler.handle(error));
+      .then(response => { this.videos = response.content; console.log(response.content); })
+      .catch(error => this.errorHandler.handle(error));
   }
 
 }

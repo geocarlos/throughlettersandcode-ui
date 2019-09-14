@@ -22,6 +22,10 @@ export class ArticlesComponent implements OnInit {
     private articleService: ArticleService,
     private errorHandler: ErrorHandlerService) { }
 
+  get noArticles(): boolean {
+    return this.articles.length < 1;
+  }
+
   ngOnInit() {
     window.scrollTo(0, 0);
     this.filter.page = 0;
