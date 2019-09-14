@@ -59,7 +59,6 @@ export class DevProjectService {
     return this.http.get(`${this.projectsUrl}/${id}`, { headers })
       .toPromise()
       .then(response => {
-        console.log('RESPONSE:', response)
         const project = response as DevProject;
 
         return project;
