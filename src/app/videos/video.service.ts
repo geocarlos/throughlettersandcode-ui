@@ -75,9 +75,9 @@ export class VideoService {
     return this.http.get(`${this.videosUrl}/${id}`, { headers })
       .toPromise()
       .then(response => {
-        const article = response as Video;
+        const video = response as Video;
 
-        return article;
+        return video;
       });
   }
 }

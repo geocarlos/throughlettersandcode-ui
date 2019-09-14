@@ -9,16 +9,16 @@ import { AppLanguage } from '../app.language';
   providedIn: 'root'
 })
 export class DevProjectService {
- 
+
   language = AppLanguage.getLanguage();
-  projectsUrl = `${environment.apiUrl}/devprojects?language=${this.language}`;
+  projectsUrl = `${environment.apiUrl}/devprojects`;
 
   constructor(private http: TlcHttp, private httpClient: HttpClient) { }
 
   listAll(): Promise<any> {
     const headers = new HttpHeaders()
       .append('Authorization', 'Basic YWRtaW46YWRtaW4=');
-    return this.httpClient.get(this.projectsUrl, { headers }).toPromise();
+    return this.httpClient.get(`${this.projectsUrl}?language=${this.language}`, { headers }).toPromise();
   }
 
   delete(codigo: number): Promise<any> {
@@ -56,10 +56,10 @@ export class DevProjectService {
     const headers = new HttpHeaders()
       .append('Authorization', 'Basic YWRtaW46YWRtaW4=');
 
-    return this.httpClient.get(`${this.projectsUrl}/${id}`, { headers })
+    return this.http.get(`${this.projectsUrl}/${id}`, { headers })
       .toPromise()
       .then(response => {
-
+        console.log('RESPONSE:', response)
         const project = response as DevProject;
 
         return project;

@@ -42,7 +42,7 @@ export class VideosComponent implements OnInit {
     this.filter.page = 0;
     this.filter.itemsPerPage = 10;
     this.videoService.get(this.filter)
-      .then(response => { this.videos = response.content; console.log(response.content); })
+      .then(response => { this.videos = response.content; })
       .catch(error => this.errorHandler.handle(error));
   }
 
