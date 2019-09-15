@@ -4,6 +4,9 @@
     <div class="manage" *ngIf="!auth.isAccessTokenInvalid()">
       <a routerLink="/create-article/">Create Article</a>
     </div>
+    <div class="loading" *ngIf="isLoading">
+      <h3 i18n="@@articlesWaitNotice">Please, wait...</h3>
+    </div>
     <div *ngIf="noArticles">
       <h3 i18n="@@noArticlesNotice">Sorry, no articles yet.</h3>
     </div>

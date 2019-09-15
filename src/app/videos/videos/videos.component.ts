@@ -17,6 +17,8 @@ export class VideosComponent implements OnInit {
 
   filter = new VideoFilter();
 
+  isRequestCompleted = false;
+
   constructor(
     private sanitizer: DomSanitizer,
     private auth: AuthService,
@@ -34,7 +36,11 @@ export class VideosComponent implements OnInit {
   }
 
   get noVideos(): boolean {
-    return this.videos.length < 1;
+    return this.videos.length < 1 && this.isRequestCompleted;
+  }
+
+  get isLoading(): boolean {
+    return !this.isRequestCompleted;
   }
 
   ngOnInit() {
@@ -42,8 +48,11 @@ export class VideosComponent implements OnInit {
     this.filter.page = 0;
     this.filter.itemsPerPage = 10;
     this.videoService.get(this.filter)
-      .then(response => { this.videos = response.content; })
-      .catch(error => this.errorHandler.handle(error));
+      .then(response => {
+        this.videos = response.content;
+      })
+      .catch(error => this.errorHandler.handle(error))
+      .finally(() => this.isRequestCompleted = true);
   }
 
 }

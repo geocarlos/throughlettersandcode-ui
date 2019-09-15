@@ -15,20 +15,29 @@ export class DevProjectsComponent implements OnInit {
 
   getPreview = getPreview;
 
+  isRequestCompleted = false;
+
   constructor(
     private devProjectService: DevProjectService,
     public auth: AuthService,
     private errorHandler: ErrorHandlerService) { }
 
   get noProjects(): boolean {
-    return this.devProjects.length < 1;
+    return this.devProjects.length < 1 && this.isRequestCompleted;
+  }
+
+  get isLoading(): boolean {
+    return !this.isRequestCompleted;
   }
 
   ngOnInit() {
     window.scrollTo(0, 0);
     this.devProjectService.listAll()
     .then(response => {this.devProjects = response.content; })
-    .catch(error => this.errorHandler.handle(error));
+    .catch(error => this.errorHandler.handle(error))
+    .finally(() => {
+      this.isRequestCompleted = true;
+    });
   }
 
 }

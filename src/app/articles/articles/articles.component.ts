@@ -17,13 +17,19 @@ export class ArticlesComponent implements OnInit {
 
   getPreview = getPreview;
 
+  private isRequestedCompleted = false;
+
   constructor(
     public auth: AuthService,
     private articleService: ArticleService,
     private errorHandler: ErrorHandlerService) { }
 
   get noArticles(): boolean {
-    return this.articles.length < 1;
+    return this.articles.length < 1 && this.isRequestedCompleted;
+  }
+
+  get isLoading(): boolean {
+    return !this.isRequestedCompleted;
   }
 
   ngOnInit() {
@@ -32,7 +38,10 @@ export class ArticlesComponent implements OnInit {
     this.filter.itemsPerPage = 10;
     this.articleService.get(this.filter)
     .then(response => {this.articles = response.content; console.log(response.content); })
-    .catch(error => this.errorHandler.handle(error));
+    .catch(error => this.errorHandler.handle(error))
+    .finally(() => {
+      this.isRequestedCompleted = true;
+    });
   }
 
 }

@@ -1,10 +1,15 @@
 <div class="container">
   <section id="videos" class="presentation videos">
     <h1 i18n="@@videosHeader">Videos</h1>
+    <div class="loading" *ngIf="isLoading">
+      <h3 i18n="@@videosWaitNotice">Please, wait...</h3>
+    </div>
     <div *ngIf="noVideos">
       <h3 i18n="@@noVideosNotice">Sorry, no videos yet.</h3>
     </div>
-    <a routerLink="/create-video/">Create Video</a>
+    <div class="manage" *ngIf="!auth.isAccessTokenInvalid()">
+      <a routerLink="/create-video/">Create Video Record</a>
+    </div>
     <div class="video" *ngFor="let video of videos">
       <h2>{{ video.title }}</h2>
       <iframe width="870" height="490" [src]="sanitizer.bypassSecurityTrustResourceUrl(youtubeUrl + video.youtubeId)"

@@ -1,6 +1,9 @@
 <div class="container">    
   <section id="dev-projects" class="presentation projects">
     <h1 i18n="@@headerProjects">Software Development Projects</h1>
+    <div class="loading" *ngIf="isLoading">
+      <h3 i18n="@@projectsWaitNotice">Please, wait...</h3>
+    </div>
     <div class="manage" *ngIf="!auth.isAccessTokenInvalid()">
       <a routerLink="/create-dev-project/">Create Dev Project</a>
     </div>

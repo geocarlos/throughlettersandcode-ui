@@ -56,7 +56,7 @@ export class DevProjectService {
     const headers = new HttpHeaders()
       .append('Authorization', 'Basic YWRtaW46YWRtaW4=');
 
-    return this.http.get(`${this.projectsUrl}/${id}`, { headers })
+    return this.httpClient.get(`${this.projectsUrl}/${id}`, { headers })
       .toPromise()
       .then(response => {
         const project = response as DevProject;
