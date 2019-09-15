@@ -20,8 +20,8 @@ export class VideosComponent implements OnInit {
   isRequestCompleted = false;
 
   constructor(
-    private sanitizer: DomSanitizer,
-    private auth: AuthService,
+    public sanitizer: DomSanitizer,
+    public auth: AuthService,
     private videoService: VideoService,
     private router: Router,
     private errorHandler: ErrorHandlerService) { }

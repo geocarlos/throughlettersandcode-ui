@@ -146,18 +146,25 @@
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="articlesWaitNotice" datatype="html">
+        <source>Please, wait...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/articles/articles/articles.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="noArticlesNotice" datatype="html">
         <source>Sorry, no articles yet.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/articles/articles/articles.component.html</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="articlesReadMore" datatype="html">
         <source>Read more</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/articles/articles/articles.component.html</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="headerProjects" datatype="html">
@@ -167,18 +174,25 @@
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="projectsWaitNotice" datatype="html">
+        <source>Please, wait...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dev.projects/dev.projects/dev.projects.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="noProjectsNotice" datatype="html">
         <source>Sorry, no projects to show yet.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/dev.projects/dev.projects/dev.projects.component.html</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="projectsReadMore" datatype="html">
         <source>Read more</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/dev.projects/dev.projects/dev.projects.component.html</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="videosHeader" datatype="html">
@@ -188,11 +202,18 @@
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="videosWaitNotice" datatype="html">
+        <source>Please, wait...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/videos/videos/videos.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="noVideosNotice" datatype="html">
         <source>Sorry, no videos yet.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/videos/videos/videos.component.html</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="aboutHeader" datatype="html">

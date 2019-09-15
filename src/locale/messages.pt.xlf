@@ -165,6 +165,14 @@
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="articlesWaitNotice" datatype="html">
+        <source>Please, wait...</source>
+        <target>Aguarde...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/articles/articles/articles.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="noArticlesNotice" datatype="html">
         <source>Sorry, no articles yet.</source>
         <target>Desculpe, ainda não há artigos.</target>
@@ -189,6 +197,14 @@
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="projectsWaitNotice" datatype="html">
+        <source>Please, wait...</source>
+        <target>Aguarde...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dev.projects/dev.projects/dev.projects.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="noProjectsNotice" datatype="html">
         <source>Sorry, no projects to show yet.</source>
         <target>Desculpe, ainda não há projetos para mostrar.</target>
@@ -211,6 +227,14 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/videos/videos/videos.component.html</context>
           <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="videosWaitNotice" datatype="html">
+        <source>Please, wait...</source>
+        <target>Aguarde...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/videos/videos/videos.component.html</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="noVideosNotice" datatype="html">
