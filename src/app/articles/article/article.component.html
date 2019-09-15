@@ -1,7 +1,7 @@
 <div class="container">
   <section class="presentation article">
     <h1>{{ article?.title }}</h1>
-    <p><em>{{article?.category.name}}</em></p>
+    <p class="category-name"><em>{{article?.category.name}}</em></p>
     <div class="article-content" [innerHTML]="article?.content"></div>
     <div class="manage" *ngIf="!auth.isAccessTokenInvalid()">
       <a routerLink="/edit-article/{{article?.id}}">Edit</a>

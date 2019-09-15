@@ -65,3 +65,10 @@ footer{
         }
     }
 }
+
+@media screen and (max-height: 570px) {
+    .footer-name-year {
+        bottom: 1%;
+        font-size: .5em;
+    }
+}  
