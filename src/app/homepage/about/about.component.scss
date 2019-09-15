@@ -19,6 +19,10 @@
 .about-video {
     text-align: center;
     padding: 1em;
+    iframe {
+        width: 690px; 
+        height: 388px;
+    }
 }
 @media screen and (max-width: 780px) {
     .about{
@@ -28,8 +32,8 @@
     .about-video {
         max-width: 90vw;
         iframe {
-            max-width: 100vw;
-            max-height: 30vh;
+            max-width: 345px;
+            max-height: 164px;
             z-index: -1;
         }
     }
@@ -43,5 +47,13 @@
         padding: 0;
         padding-top: 3em;
         margin: auto;
+    }
+    .about-video {
+        max-width: 90vw;
+        iframe {
+            max-width: 280px;
+            max-height: 120px;
+            z-index: -1;
+        }
     }
 }

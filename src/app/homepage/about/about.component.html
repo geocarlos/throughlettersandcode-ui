@@ -2,7 +2,7 @@
   <h2 i18n="@@aboutHeader">About myself</h2>
   <div class="about-content">
     <div class="about-video">
-      <iframe width="690" height="388" src="https://www.youtube.com/embed/Y60M18S4VU0" frameborder="0"
+      <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+videoId)" frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <p i18n="@@aboutParagraph1">
