@@ -49,7 +49,7 @@ export class VideosComponent implements OnInit {
     this.filter.itemsPerPage = 10;
     this.videoService.get(this.filter)
       .then(response => {
-        this.videos = response.content;
+        this.videos = response.content.reverse();
       })
       .catch(error => this.errorHandler.handle(error))
       .finally(() => this.isRequestCompleted = true);

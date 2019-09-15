@@ -37,7 +37,7 @@ export class ArticlesComponent implements OnInit {
     this.filter.page = 0;
     this.filter.itemsPerPage = 10;
     this.articleService.get(this.filter)
-    .then(response => {this.articles = response.content; console.log(response.content); })
+    .then(response => {this.articles = response.content.reverse(); })
     .catch(error => this.errorHandler.handle(error))
     .finally(() => {
       this.isRequestedCompleted = true;

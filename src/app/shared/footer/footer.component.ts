@@ -15,11 +15,11 @@ export class FooterComponent implements OnInit {
   constructor() { }
 
   changeLanguage() {
-    const pathName = window.location.pathname;
+    const location = window.location;
     if (this.language === 'pt') {
-      window.location.href = window.location.href.replace('br/', '');
+      location.href = location.href.replace('br/', '');
     } else {
-      window.location.href = window.location.href.replace(pathName, '/br' + pathName);
+      location.href = `${location.origin}/br${location.pathname}`;
     }
   }
 

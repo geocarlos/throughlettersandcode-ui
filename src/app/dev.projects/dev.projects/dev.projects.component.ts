@@ -33,7 +33,7 @@ export class DevProjectsComponent implements OnInit {
   ngOnInit() {
     window.scrollTo(0, 0);
     this.devProjectService.listAll()
-    .then(response => {this.devProjects = response.content; })
+    .then(response => {this.devProjects = response.content.reverse(); })
     .catch(error => this.errorHandler.handle(error))
     .finally(() => {
       this.isRequestCompleted = true;
