@@ -3,6 +3,10 @@
     <h2>New Category</h2>
     <form #categoryForm="ngForm" autocomplete="off">
       <input type="text" name="name" [(ngModel)]="category.name" placeholder="Name of new category">
+      <select id="language" name="language" [(ngModel)]="category.language" >
+        <option value="en">English</option>
+        <option value="pt">Portuguese</option>
+      </select>
       <div style="padding: 1em">
         <button (click)="addCategory($event)">Add</button>
         <button (click)="close($event)">Close</button>

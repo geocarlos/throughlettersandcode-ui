@@ -3,6 +3,7 @@ import { CategoryService } from '../category.service';
 
 class Category {
   name: string;
+  language: string;
 }
 
 @Component({
