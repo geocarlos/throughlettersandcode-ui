@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DevProjectService } from '../dev.project.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DevProject } from 'src/app/core/models';
@@ -10,7 +10,7 @@ import { AuthService } from 'src/app/security/auth.service';
   templateUrl: './dev-project.component.html',
   styleUrls: ['./dev-project.component.scss']
 })
-export class DevProjectComponent implements OnInit {
+export class DevProjectComponent implements OnInit, OnDestroy {
 
   project: DevProject;
   language: string;
@@ -36,6 +36,10 @@ export class DevProjectComponent implements OnInit {
     this.projectService.getById(this.route.snapshot.params.id)
     .then(response => this.project = response)
     .catch(error => this.errorHandler.handle(error));
+  }
+
+  ngOnDestroy(): void {
+    window.document.title = 'Through Letters & Code';
   }
 
 }

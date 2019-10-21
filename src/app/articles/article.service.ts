@@ -76,7 +76,7 @@ export class ArticleService {
       .toPromise()
       .then(response => {
         const article = response as Article;
-
+        window.document.title = article.title;
         return article;
       });
   }

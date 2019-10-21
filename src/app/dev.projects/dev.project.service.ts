@@ -60,7 +60,7 @@ export class DevProjectService {
       .toPromise()
       .then(response => {
         const project = response as DevProject;
-
+        window.document.title = project.title;
         return project;
       });
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ArticleService } from '../article.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Article } from 'src/app/core/models';
@@ -10,7 +10,7 @@ import { AuthService } from 'src/app/security/auth.service';
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.scss']
 })
-export class ArticleComponent implements OnInit {
+export class ArticleComponent implements OnInit, OnDestroy {
 
   article: Article;
   language: string;
@@ -22,20 +22,23 @@ export class ArticleComponent implements OnInit {
     private router: Router,
     private errorHandler: ErrorHandlerService) { }
 
-  deleteArticle(id: number) {
-    this.articleService.delete(id)
-    .then(() => {
-      window.alert('Article has been deleted.');
-      this.router.navigateByUrl('/articles');
-    })
-    .catch(error => this.errorHandler.handle(error));
-  }
+    deleteArticle(id: number) {
+      this.articleService.delete(id)
+      .then(() => {
+        window.alert('Article has been deleted.');
+        this.router.navigateByUrl('/articles');
+      })
+      .catch(error => this.errorHandler.handle(error));
+    }
 
-  ngOnInit() {
-    window.scrollTo(0, 0);
-    this.articleService.getById(this.route.snapshot.params.id)
-    .then(response => this.article = response)
-    .catch(error => this.errorHandler.handle(error));
-  }
+    ngOnInit() {
+      window.scrollTo(0, 0);
+      this.articleService.getById(this.route.snapshot.params.id)
+      .then(response => this.article = response)
+      .catch(error => this.errorHandler.handle(error));
+    }
 
+    ngOnDestroy(): void {
+      window.document.title = 'Through Letters & Code';
+    }
 }
