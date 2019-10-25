@@ -15,7 +15,7 @@
       <iframe width="870" height="490" [src]="sanitizer.bypassSecurityTrustResourceUrl(youtubeUrl + video.youtubeId)"
         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
-      <div class="description">{{ video.description }}</div>
+      <div class="description" [innerHTML]="video?.description"></div>
       <div class="manage" *ngIf="!auth.isAccessTokenInvalid()">
         <a routerLink="/edit-video/{{video.id}}">Edit</a>
         <a style="cursor: pointer; text-decoration: underline" (click)="deleteVideo(video.id)">Delete</a>
